@@ -10,8 +10,8 @@ namespace Entidades
     public class TiposTelefonos
     {
         [Key]
-        int TipoId;
-        string Descripcion;
+        public int TipoId;
+        public string Descripcion;
         public List<Clientes> Client { get; set; }
     }
 }

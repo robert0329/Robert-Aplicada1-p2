@@ -16,7 +16,7 @@ namespace DAL
         }
         public virtual DbSet<Clientes> clientes { get; set; }
         public virtual DbSet<TiposTelefonos> TipoTelefono { get; set; }
-        public virtual DbSet<ClientesTelefonos> CLientT{ get; set; }
+        public virtual DbSet<ClientesTelefonos> CLientT { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -30,7 +30,5 @@ namespace DAL
                     FE.ToTable("ClientesTelefonos");
                 });
         }
-        
     }
 }
-

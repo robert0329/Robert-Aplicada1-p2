@@ -16,14 +16,16 @@ namespace Entidades
         public double LimiteCredito;
         private int selectedValue;
         private string text;
+        private string selectedValue1;
 
         public Clientes()
         {
 
         }
-        public Clientes(int selectedValue, string text)
+
+        public Clientes(string selectedValue1, string text)
         {
-            this.selectedValue = selectedValue;
+            this.selectedValue1 = selectedValue1;
             this.text = text;
         }
 

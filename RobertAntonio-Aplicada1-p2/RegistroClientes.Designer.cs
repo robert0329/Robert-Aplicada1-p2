@@ -46,6 +46,8 @@
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DescripciontextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +127,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(175, 393);
+            this.button3.Location = new System.Drawing.Point(112, 427);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 11;
@@ -134,7 +136,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(346, 393);
+            this.button4.Location = new System.Drawing.Point(207, 427);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 12;
@@ -143,7 +145,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(16, 393);
+            this.Guardarbutton.Location = new System.Drawing.Point(15, 427);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 23);
             this.Guardarbutton.TabIndex = 13;
@@ -154,9 +156,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 251);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 298);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(405, 123);
+            this.dataGridView1.Size = new System.Drawing.Size(361, 123);
             this.dataGridView1.TabIndex = 14;
             // 
             // label5
@@ -175,10 +177,11 @@
             this.TipocomboBox.Name = "TipocomboBox";
             this.TipocomboBox.Size = new System.Drawing.Size(271, 21);
             this.TipocomboBox.TabIndex = 16;
+            this.TipocomboBox.SelectedIndexChanged += new System.EventHandler(this.TipocomboBox_SelectedIndexChanged);
             // 
             // Agregarbutton
             // 
-            this.Agregarbutton.Location = new System.Drawing.Point(325, 222);
+            this.Agregarbutton.Location = new System.Drawing.Point(298, 245);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(75, 23);
             this.Agregarbutton.TabIndex = 17;
@@ -202,11 +205,29 @@
             this.TelefonomaskedTextBox.Size = new System.Drawing.Size(271, 20);
             this.TelefonomaskedTextBox.TabIndex = 19;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 250);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Descripcion";
+            // 
+            // DescripciontextBox
+            // 
+            this.DescripciontextBox.Location = new System.Drawing.Point(16, 267);
+            this.DescripciontextBox.Name = "DescripciontextBox";
+            this.DescripciontextBox.Size = new System.Drawing.Size(271, 20);
+            this.DescripciontextBox.TabIndex = 21;
+            // 
             // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 455);
+            this.ClientSize = new System.Drawing.Size(604, 455);
+            this.Controls.Add(this.DescripciontextBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.TelefonomaskedTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Agregarbutton);
@@ -254,5 +275,7 @@
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox DescripciontextBox;
     }
 }

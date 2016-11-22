@@ -22,26 +22,28 @@ namespace RobertAntonio_Aplicada1_p2
         {
             InitializeComponent();
         }
-        public void Listartipo()
-        {
-            var conn = new Parcial2DB();
-            var lis = conn.TipoTelefono.ToList();
+        //public void Listartipo()
+        //{
+        //    var conn = new Parcial2DB();
+        //    var lis = conn.TipoTelefono.ToList();
 
-            if (lis.Count > 0)
-            {
-                TipocomboBox.DataSource = lis;
-                TipocomboBox.ValueMember = "Descripcion";
-            }
-        }
+        //    if (lis.Count > 0)
+        //    {
+        //        TipocomboBox.DataSource = lis;
+        //        TipocomboBox.ValueMember = "Descripcion";
+        //    }
+        //}
         
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Clientes Client = new Clientes();
+            TiposTelefonos TT = new TiposTelefonos();
             Client.Nombres = NombretextBox.Text;
             Client.FechaNacimiento = FechamaskedTextBox.Text;
             Client.LimiteCredito = Convert.ToInt32(LimitemaskedTextBox.Text);
-
+            TT.Descripcion = DescripciontextBox.Text;
+            BLL.TiposTelefonosBLL.Guardar(TT);
             if (BLL.ClientesBLL.Guardar(Client))
             {
                 MessageBox.Show("Guardo");
@@ -50,12 +52,12 @@ namespace RobertAntonio_Aplicada1_p2
 
         private void RegistroClientes_Load(object sender, EventArgs e)
         {
-            Listartipo();
+            //Listartipo();
         }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-            TiposTe.Client.Add(new Clientes((int)TipocomboBox.SelectedValue, TipocomboBox.Text));
+            TiposTe.Client.Add(new Clientes((String)TipocomboBox.SelectedValue, TipocomboBox.Text));
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = TiposTe.Client;
         }
@@ -66,6 +68,11 @@ namespace RobertAntonio_Aplicada1_p2
             {
                 NombretextBox.Text = grupo.Nombres;
             }
+        }
+
+        private void TipocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
